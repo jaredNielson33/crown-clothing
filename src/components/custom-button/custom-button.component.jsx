@@ -6,9 +6,9 @@ import "./custom-button.styles.scss";
 const CustomButton = ({children, ...otherProps}) => (
     <div>
         <Button
-            variant={otherProps.color}
+            color={otherProps.color}
             className="custom-button"
-            >
+            {...otherProps}>
             {children}
         </Button>
     </div>
