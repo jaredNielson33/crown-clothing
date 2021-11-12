@@ -3,14 +3,13 @@ import { Button } from "reactstrap";
 
 import "./custom-button.styles.scss";
 
-const CustomButton = ({children, ...otherProps}) => (
-    <div>
-        <Button
-            color={otherProps.color}
-            className="custom-button"
+const CustomButton = ({children, isGoogleSignIn, ...otherProps}) => (
+    <div className='button'>
+        <button
+            className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`}
             {...otherProps}>
             {children}
-        </Button>
+        </button>
     </div>
 );
 
